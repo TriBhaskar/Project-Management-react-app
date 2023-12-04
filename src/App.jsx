@@ -1,8 +1,20 @@
+import AddNewProject from "./components/AddNewProject";
+import ProjectTask from "./components/ProjectTask";
+import SideBarComponent from "./components/SideBarComponent";
+import NoProjectSelected from "./components/NoProjectSelected";
+import { useState } from "react";
+
 function App() {
+  const [] = useState({
+    selectedProjectId: undefined,
+    projects: [],
+  });
+
   return (
-    <>
-      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
-    </>
+    <main className="h-screen my-8 flex gap-8">
+      <SideBarComponent />
+      <NoProjectSelected />
+    </main>
   );
 }
 
